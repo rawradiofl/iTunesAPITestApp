@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F03E673019C388F100525B7E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E672F19C388F100525B7E /* Album.swift */; };
+		F03E673219C3A68A00525B7E /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = F03E673119C3A68A00525B7E /* Blank52.png */; };
 		F0AA404D19C3490B0076F63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA404C19C3490B0076F63F /* AppDelegate.swift */; };
-		F0AA404F19C3490B0076F63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA404E19C3490B0076F63F /* ViewController.swift */; };
+		F0AA404F19C3490B0076F63F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA404E19C3490B0076F63F /* SearchResultsViewController.swift */; };
 		F0AA405219C3490B0076F63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AA405019C3490B0076F63F /* Main.storyboard */; };
 		F0AA405419C3490B0076F63F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0AA405319C3490B0076F63F /* Images.xcassets */; };
 		F0AA405719C3490B0076F63F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AA405519C3490B0076F63F /* LaunchScreen.xib */; };
 		F0AA406319C3490B0076F63F /* iTunesAPITestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA406219C3490B0076F63F /* iTunesAPITestAppTests.swift */; };
+		F0AA406D19C35AD50076F63F /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA406C19C35AD50076F63F /* APIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F03E672F19C388F100525B7E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F03E673119C3A68A00525B7E /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 		F0AA404719C3490B0076F63F /* iTunesAPITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AA404B19C3490B0076F63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AA404C19C3490B0076F63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0AA404E19C3490B0076F63F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0AA404E19C3490B0076F63F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		F0AA405119C3490B0076F63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0AA405319C3490B0076F63F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0AA405619C3490B0076F63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F0AA405C19C3490B0076F63F /* iTunesAPITestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesAPITestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AA406119C3490B0076F63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AA406219C3490B0076F63F /* iTunesAPITestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPITestAppTests.swift; sourceTree = "<group>"; };
+		F0AA406C19C35AD50076F63F /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 				F0AA404919C3490B0076F63F /* iTunesAPITestApp */,
 				F0AA405F19C3490B0076F63F /* iTunesAPITestAppTests */,
 				F0AA404819C3490B0076F63F /* Products */,
+				F03E673119C3A68A00525B7E /* Blank52.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				F0AA404C19C3490B0076F63F /* AppDelegate.swift */,
-				F0AA404E19C3490B0076F63F /* ViewController.swift */,
+				F0AA404E19C3490B0076F63F /* SearchResultsViewController.swift */,
+				F03E672F19C388F100525B7E /* Album.swift */,
+				F0AA406C19C35AD50076F63F /* APIController.swift */,
 				F0AA405019C3490B0076F63F /* Main.storyboard */,
 				F0AA405319C3490B0076F63F /* Images.xcassets */,
 				F0AA405519C3490B0076F63F /* LaunchScreen.xib */,
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AA405219C3490B0076F63F /* Main.storyboard in Resources */,
+				F03E673219C3A68A00525B7E /* Blank52.png in Resources */,
 				F0AA405719C3490B0076F63F /* LaunchScreen.xib in Resources */,
 				F0AA405419C3490B0076F63F /* Images.xcassets in Resources */,
 			);
@@ -212,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0AA404F19C3490B0076F63F /* ViewController.swift in Sources */,
+				F0AA404F19C3490B0076F63F /* SearchResultsViewController.swift in Sources */,
 				F0AA404D19C3490B0076F63F /* AppDelegate.swift in Sources */,
+				F0AA406D19C35AD50076F63F /* APIController.swift in Sources */,
+				F03E673019C388F100525B7E /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				F0AA406819C3490B0076F63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0AA406919C3490B0076F63F /* Build configuration list for PBXNativeTarget "iTunesAPITestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				F0AA406B19C3490B0076F63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
