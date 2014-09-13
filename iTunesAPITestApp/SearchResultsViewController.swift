@@ -69,6 +69,13 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         cell.detailTextLabel?.text = formattedPrice
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var detailsViewController: DetailsViewController = segue.destinationViewController as DetailsViewController
+        var albumIndex = searchResultsTableView!.indexPathForSelectedRow()?.row
+        var selectedAlbum = self.albums[albumIndex!]
+        detailsViewController.album = selectedAlbum
+    }
 
     func didReceiveAPIRestults(results: NSDictionary) {
         var resultsArr: NSArray = results["results"] as NSArray

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F03E042419C4C3510093F59D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E042319C4C3510093F59D /* DetailsViewController.swift */; };
+		F03E042619C4D6970093F59D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E042519C4D6970093F59D /* Track.swift */; };
+		F03E042819C4DCF20093F59D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E042719C4DCF20093F59D /* TrackCell.swift */; };
 		F03E673019C388F100525B7E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E672F19C388F100525B7E /* Album.swift */; };
 		F03E673219C3A68A00525B7E /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = F03E673119C3A68A00525B7E /* Blank52.png */; };
 		F0AA404D19C3490B0076F63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA404C19C3490B0076F63F /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F03E042319C4C3510093F59D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F03E042519C4D6970093F59D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		F03E042719C4DCF20093F59D /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		F03E672F19C388F100525B7E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		F03E673119C3A68A00525B7E /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 		F0AA404719C3490B0076F63F /* iTunesAPITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +95,10 @@
 				F03E672F19C388F100525B7E /* Album.swift */,
 				F0AA406C19C35AD50076F63F /* APIController.swift */,
 				F0AA405019C3490B0076F63F /* Main.storyboard */,
+				F03E042719C4DCF20093F59D /* TrackCell.swift */,
+				F03E042319C4C3510093F59D /* DetailsViewController.swift */,
 				F0AA405319C3490B0076F63F /* Images.xcassets */,
+				F03E042519C4D6970093F59D /* Track.swift */,
 				F0AA405519C3490B0076F63F /* LaunchScreen.xib */,
 				F0AA404A19C3490B0076F63F /* Supporting Files */,
 			);
@@ -222,10 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03E042819C4DCF20093F59D /* TrackCell.swift in Sources */,
 				F0AA404F19C3490B0076F63F /* SearchResultsViewController.swift in Sources */,
 				F0AA404D19C3490B0076F63F /* AppDelegate.swift in Sources */,
 				F0AA406D19C35AD50076F63F /* APIController.swift in Sources */,
 				F03E673019C388F100525B7E /* Album.swift in Sources */,
+				F03E042419C4C3510093F59D /* DetailsViewController.swift in Sources */,
+				F03E042619C4D6970093F59D /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
