@@ -2,7 +2,7 @@
 //  Album.swift
 //  iTunesAPITestApp
 //
-//  Created by Me on 9/12/14.
+//  Created by Scott Martin on 9/12/14.
 //  Copyright (c) 2014 Me. All rights reserved.
 //
 
