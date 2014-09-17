@@ -80,11 +80,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         })
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        if let searchTerm: String = searchBar.text {
-            api!.searchItunesFor(searchTerm)
-        }
-    }
+//    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+//        if let searchTerm: String = searchBar.text {
+//            api!.searchItunesFor(searchTerm)
+//        }
+//    }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if let searchTerm: String = searchBar.text {

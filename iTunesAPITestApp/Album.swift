@@ -35,7 +35,7 @@ class Album {
                 // handle both tracks and collections
                 var name = result["trackName"] as? String
                 if (name == nil) {
-                    name = result["collectionName"] as? String
+                    name = result["collectionName"] as? String ?? ""
                 }
                 
                 // price can be formattedPrice or collectionPrice and be either float or String
@@ -60,10 +60,12 @@ class Album {
                 if itemURL == nil {
                     itemURL = result["trackViewUrl"] as? String ?? ""
                 }
+                let collectionId = result["collectionId"] as? Int
                 
-                var collectionId = result["collectionId"] as? Int
-                var newAlbum = Album(name: name!, price: price!, thumbnailImageURL: thumbnailURL, largeImageURL: imageURL, itemURL: itemURL!, artistURL: artistURL, collectionId: collectionId!)
-                albums.append(newAlbum)
+                if name != nil && price != nil && itemURL != nil && collectionId != nil {
+                    var newAlbum = Album(name: name!, price: price!, thumbnailImageURL: thumbnailURL, largeImageURL: imageURL, itemURL: itemURL!, artistURL: artistURL, collectionId: collectionId!)
+                    albums.append(newAlbum)
+                }
             }
         }
         return albums
