@@ -10,7 +10,8 @@ import UIKit
 import QuartzCore
 
 
-class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, APIControllerProtocol {
+class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, APIControllerProtocol, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchResultsTableView: UITableView!
     
     var albums = [Album]()
@@ -23,7 +24,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         api = APIController(delegate: self)
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        api!.searchItunesFor("Beatles")
+        //api!.searchItunesFor("Beatles")
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +78,19 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         UIView.animateWithDuration(0.25, animations: {
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
         })
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        if let searchTerm: String = searchBar.text {
+            api!.searchItunesFor(searchTerm)
+        }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if let searchTerm: String = searchBar.text {
+            api!.searchItunesFor(searchTerm)
+        }
+        self.searchBar.resignFirstResponder()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

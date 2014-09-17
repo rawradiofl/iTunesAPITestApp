@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fQH-C9-YA9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fQH-C9-YA9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-m0-Y4L">
-                                <rect key="frame" x="-7" y="28" width="613" height="572"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zkD-nv-nkX">
+                                <rect key="frame" x="-1" y="64" width="603" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="afk-6u-naQ"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-m0-Y4L">
+                                <rect key="frame" x="-7" y="108" width="616" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultsCell" textLabel="MyP-6q-Dpc" detailTextLabel="aXj-sq-mgO" style="IBUITableViewCellStyleSubtitle" id="SzK-Ol-QHC">
@@ -52,9 +60,19 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zkD-nv-nkX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-17" id="Fk3-ec-Tc4"/>
+                            <constraint firstItem="Hcd-m0-Y4L" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-23" id="KqW-XH-D1X"/>
+                            <constraint firstItem="zkD-nv-nkX" firstAttribute="centerX" secondItem="Hcd-m0-Y4L" secondAttribute="centerX" id="Yll-SL-wgl"/>
+                            <constraint firstItem="Hcd-m0-Y4L" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="a7f-Vs-F5H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zkD-nv-nkX" secondAttribute="trailing" constant="-18" id="aDX-CF-nGk"/>
+                            <constraint firstItem="zkD-nv-nkX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="djI-zF-QGY"/>
+                            <constraint firstItem="Hcd-m0-Y4L" firstAttribute="top" secondItem="zkD-nv-nkX" secondAttribute="bottom" id="hmA-SZ-OCd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="iTunesTestApp1" id="Kzx-Be-iZy"/>
                     <connections>
+                        <outlet property="searchBar" destination="zkD-nv-nkX" id="icx-un-a30"/>
                         <outlet property="searchResultsTableView" destination="Hcd-m0-Y4L" id="qsy-Th-Xt8"/>
                     </connections>
                 </viewController>
@@ -139,13 +157,13 @@
                                                     <exclude reference="pLw-9D-Che"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="4yg-ts-G6U"/>
-                                                    <exclude reference="Hyg-pz-fxn"/>
-                                                    <exclude reference="Uzy-Gh-lpo"/>
                                                     <exclude reference="GvH-y2-Uv4"/>
                                                     <exclude reference="OII-az-dUY"/>
                                                     <exclude reference="c95-ee-QUB"/>
                                                     <exclude reference="m7t-6x-v6r"/>
+                                                    <exclude reference="4yg-ts-G6U"/>
+                                                    <exclude reference="Hyg-pz-fxn"/>
+                                                    <exclude reference="Uzy-Gh-lpo"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -154,13 +172,13 @@
                                                     <include reference="pLw-9D-Che"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="4yg-ts-G6U"/>
-                                                    <include reference="Hyg-pz-fxn"/>
-                                                    <include reference="Uzy-Gh-lpo"/>
                                                     <include reference="GvH-y2-Uv4"/>
                                                     <include reference="OII-az-dUY"/>
                                                     <include reference="c95-ee-QUB"/>
                                                     <include reference="m7t-6x-v6r"/>
+                                                    <include reference="4yg-ts-G6U"/>
+                                                    <include reference="Hyg-pz-fxn"/>
+                                                    <include reference="Uzy-Gh-lpo"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -203,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5di-a1-gIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="331"/>
+            <point key="canvasLocation" x="2446.5" y="286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vUR-zE-XM4">
