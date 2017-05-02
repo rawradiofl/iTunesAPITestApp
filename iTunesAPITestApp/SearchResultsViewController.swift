@@ -46,9 +46,9 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         let urlString = album.thumbnailImageURL
         var image = self.imageCache[urlString]
         if image == nil {
-            var imageURL: NSURL = NSURL(string: urlString)
+            var imageURL: NSURL? = NSURL(string: urlString)
             // Download the image
-            let request: NSURLRequest = NSURLRequest(URL: imageURL)
+            let request: NSURLRequest = NSURLRequest(URL: imageURL!)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
                 (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
                 if error == nil {
